@@ -7,7 +7,7 @@
 
         <div id="epci_{{dataid}}" class="content-list">
             <div class="card-body">
-                <div class="card"><a class="fiche-level-1 card-header" target="_blank" href="http://192.168.35.220/mreport/epci_population/{{dataid}}">Population
+                <div class="card"><a class="fiche-level-1 card-header" target="_blank" href="/mreport/epci_population/{{dataid}}">Population
                     du territoire<span><i class="fas fa-users"/></span></a>
                 </div>
 
