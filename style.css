@@ -1,0 +1,459 @@
+
+main{
+  position:relative;
+  display:block;
+}
+
+h1{
+  display:inline-block;
+  color:#f7f7f7;
+  font-size:25px;
+  margin-left:10px;
+
+}
+
+#map {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /*background: #f7f7f7;*/
+    border-radius: 6px;
+   /* box-shadow:0 0 10px #ccc;*/
+    /*margin-bottom:50px;*/
+    overflow:hidden;
+
+  }
+
+  #map svg {
+    /*z-index: 10;*/
+    margin-top: 25px;
+    /*overflow:visible!important;*/
+  }
+
+  #map svg{
+    height:auto!important
+  }
+
+
+  .recherche {
+    position: relative;
+    margin-left: auto;
+  }
+
+  .-home .-contentList #epci_list #searchFeedback2, #searchIndication {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 30px 0 0;
+    text-align: center;
+}
+
+#epci_list_container{
+  position:absolute;
+  background-color:#444;
+  right:0;
+  top: 70px;
+  display:none;
+  transition: 0.5s;
+  overflow-y:inherit;
+  display: none;
+}
+
+main,
+#epci_list_container{
+  transition: 1s;
+}
+
+#epci_list_container .main-content :hover{
+  cursor:pointer;
+  background-color:#222;
+}
+
+#epci_list_container h3{
+  padding:15px;
+  font-size:18px;
+  color:#f5f5f5;
+}
+
+#epci_list_container h4{
+  padding:10px;
+  color:#eee;
+}
+
+#epci_list .card-header{
+  background-color:#666;
+}
+
+.card .badge-dark {
+    right: 10px;
+    float: right;
+    line-height: 1.2rem;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.fiche-list {
+  text-align: left;
+  padding-left: 25px;
+}
+
+.fiche-level-1 span {
+  float: right;
+  padding-right: 9px;
+}
+
+.fiche-level-2.disabled {
+  font-style: italic;
+}
+
+.fiche-level-3.disabled {
+font-style: italic;
+color:black!important;
+}
+
+.fiche-level-2.enabled:after,
+.fiche-level-3.enabled:after{
+  content: '';
+ /* background: url(https://kartenn.region-bretagne.fr/kartoviz/apps/region/bretagne_bzh/css/fleche.svg) center no-repeat;*/
+  background-size: contain;
+  display: inline-block;
+  width: 1em;
+  height: .81em;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.fiche-level-2.enabled,
+.fiche-level-3.enabled {
+  color: #97C23A;
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+div.fiche-level-2{
+  color: #97C23A;
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin-top: 1.6rem;
+}
+
+.-home #epci_modal a.fiche-level-3.enabled{
+display:inline-block;
+}
+
+.card.card-theme {
+  padding:0;
+  margin:15px 0;
+}
+
+.card-header{
+  border:none;
+}
+
+.map-feature {
+  fill: #FFFFFF;
+
+  stroke: #0094AB;
+  stroke-width: 1;
+  stroke-linejoin: round;
+  cursor: pointer;
+  transition: fill .4s ease;
+}
+
+.map-feature.filtered {
+  fill: #9ecfd8;
+}
+
+.map-feature:hover {
+  fill: #00a6c0;
+}
+
+.map-feature.selected {
+  fill: #295a63;
+}
+
+/* Customize map.feature by id (44 + ouessant)*/
+.map-feature#feature-29155, map-feature#feature-29155:hover,
+.map-feature#feature-44, map-feature#feature-44:hover {
+  stroke-dasharray: 4;
+  fill: rgba(0,0,0,0);
+  cursor: default;
+
+}
+
+.modal .modal-content{
+  padding:30px;
+  padding-bottom:15px;
+}
+
+.modal .modal-header{
+  margin-bottom:30px;
+}
+
+.modal .modal-title{
+  margin:0 auto;
+  max-width:400px;
+}
+
+.card-body{
+  padding:0;
+  margin:0
+}
+
+.card-body .card-theme .card-body{
+  padding:15px;
+}
+
+.-home .title.toggled-margin{
+  margin-top:25px;
+  font-size:23px;
+}
+
+#searchIndication{
+  margin:25px;
+}
+
+.main-content .content-list {
+  display: none;
+  margin-bottom:10px;
+}
+
+.container{
+  width:auto;
+}
+
+.btn-fixed-bottom{
+  font-size:13px;
+  border-radius:15px;
+  width:60%;
+  left:50%;
+  transform:translateX(-50%);
+  box-shadow:0 0 5px #aaa;
+  bottom:15px;
+}
+
+.close{
+  font-size:40px;
+  font-weight:700;
+  margin-right:15px;
+}
+
+.completeList{
+  padding:15px 30px;
+}
+
+.btn-primary,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle,
+.btn-primary:hover{
+  background-color:#555;
+}
+
+.btn-primary:focus{
+  background-color:#295a63;;
+
+}
+
+.mobileShow{
+  display:none;
+}
+
+
+.card.main-content {
+  display: none;
+}
+
+.card.main-content.selected {
+  display: flex;
+}
+
+.cancel {
+  position: absolute;
+  right: 40px;
+  top: 8px;
+  width: 25px;
+  height: 25px;
+}
+
+.cancel:hover {
+  cursor:pointer;
+}
+.cancel:before, .cancel:after {
+  position: absolute;
+  right:10px;
+  content: ' ';
+  height: 25px;
+  width: 3px;
+  background-color: black;
+}
+.cancel:before {
+  transform: rotate(45deg);
+}
+.cancel:after {
+  transform: rotate(-45deg);
+}
+
+#search::-webkit-search-cancel-button{
+  display:none!important;
+}
+
+header .cancel{
+  display:none;
+}
+
+#epci_modal span.cancel,
+#email_modal span.cancel{
+  display:block!important;
+  border: none;
+  background-color: transparent;
+  top:15px;
+  right:15px;
+
+}
+
+.email_trigger{
+  margin: auto 0.5rem;
+  padding:0;
+  padding-left:1.5rem;
+}
+
+.email_trigger img{
+  width:1.5rem;
+}
+
+.email_trigger:hover{
+  cursor:pointer;
+}
+
+#email_modal h4{
+  margin-top:3rem;
+}
+
+#sendMail{
+  margin-top:2rem;
+}
+
+
+/*--Media queries--*/
+
+@media only screen and (max-width: 767px) {
+  h1{
+  font-size:20px;
+  }
+.-home .title.toggled-margin{
+    font-size:18px
+  }
+  h4{
+    font-size:15px;
+  }
+  .mobileShow{
+    display:block;
+    text-align:center;
+  }
+  .mobileShow .epciModalButton{
+    widows: 100%;
+    margin:20px;
+    background-color:#eee;
+    border-radius:5px;
+    padding:5px;
+  }
+  #map{
+    margin:20px auto;
+  }
+  #epci_list_container{
+    top:70px;
+    padding-top: 20px;
+  }
+  #epci_list_container,
+  #epci_list{
+    min-height:450px!important;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  #map{
+    width:90%;
+  }
+  .recherche{
+    margin-right:0px;
+  }
+  #epci_list_container{
+      padding-top: 20px;
+    }
+
+  .header .logo img{
+    width:30px;
+    vertical-align:bottom;
+  }
+
+    .email_trigger{
+    position:absolute;
+    top:23px;
+    right:20px;
+  }
+
+  /* Reduced search*/
+  .recherche.reduced{
+    background-color:white;
+    border-radius:25px;
+    margin:0;
+    right:60px;
+    position:absolute;
+  }
+  .header .recherche.reduced .cancel{
+    display:none!important;
+  }
+  .header .recherche.reduced button i{
+    width:21px;
+    height:21px;
+  }
+  .header .recherche.reduced .search-trigger{
+    width:40px;
+    right:0;
+  }
+  .header .recherche.reduced button{
+    width:unset;
+    height:unset;
+    right:unset;
+    padding:10px;
+  }
+
+  .header .recherche:not(.reduced) .search-trigger.transition{
+    width:100%;
+    animation:reveal 0.5s backwards;
+  }
+
+  @keyframes reveal {
+    from {
+      clip-path: inset(0 0 0 100%);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+}
+
+@media only screen and (max-width: 356px) {
+  h1{
+    font-size:18px;
+  }
+}
